@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemViewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/info_Seq"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Seq"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/info_textView"
+            app:layout_constraintStart_toEndOf="@+id/info_textView"
+            app:layout_constraintTop_toTopOf="@+id/info_textView" />
+
+        <TextView
+            android:id="@+id/info_Nickname"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center|left"
+            android:text="Nickname"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/info_textView2"
+            app:layout_constraintStart_toEndOf="@+id/info_textView2"
+            app:layout_constraintTop_toTopOf="@+id/info_textView2" />
+
+        <TextView
+            android:id="@+id/info_Title"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:text="Title"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/info_textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/info_textView3"
+            app:layout_constraintTop_toTopOf="@+id/info_textView3" />
+
+        <TextView
+            android:id="@+id/info_Contents"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="56dp"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Contents"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/info_textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/info_textView4"
+            app:layout_constraintTop_toTopOf="@+id/info_textView4"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <TextView
+            android:id="@+id/info_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/info_Nickname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/info_Nickname"
+            app:layout_constraintTop_toTopOf="@+id/info_Nickname" />
+
+        <TextView
+            android:id="@+id/info_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="번호"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/info_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:text="별명 :"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_Contents" />
+
+        <TextView
+            android:id="@+id/info_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text=" 제목 :"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/info_Seq"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/info_textView4"
+            android:layout_width="39dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:text="내용 :"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_textView" />
+
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_button"
+            android:text="삭제"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/info_update"
+            app:layout_constraintEnd_toStartOf="@+id/info_update"
+            app:layout_constraintTop_toTopOf="@+id/info_update"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/info_update"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_button"
+            android:text="수정"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_Date"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/update_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/updateView_Seq"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Seq"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/updateView_textView"
+            app:layout_constraintStart_toEndOf="@+id/updateView_textView"
+            app:layout_constraintTop_toTopOf="@+id/updateView_textView" />
+
+        <EditText
+            android:id="@+id/updateView_Title"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center|left"
+            android:hint="Title"
+            android:singleLine="true"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/updateView_textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/updateView_textView3"
+            app:layout_constraintTop_toTopOf="@+id/updateView_textView3" />
+
+        <EditText
+            android:id="@+id/updateView_Contents"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="56dp"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:hint="Contents"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/updateView_textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/updateView_textView4"
+            app:layout_constraintTop_toTopOf="@+id/updateView_textView4"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <EditText
+            android:id="@+id/updateView_Nickname"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center|left"
+            android:hint="Nickname"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/updateView_textView2"
+            app:layout_constraintStart_toEndOf="@+id/updateView_textView2"
+            app:layout_constraintTop_toTopOf="@+id/updateView_textView2" />
+
+        <TextView
+            android:id="@+id/updateView_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/updateView_Nickname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/updateView_Nickname"
+            app:layout_constraintTop_toTopOf="@+id/updateView_Nickname" />
+
+        <TextView
+            android:id="@+id/updateView_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="번호"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/updateView_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:text="별명 :"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateView_Contents" />
+
+        <TextView
+            android:id="@+id/updateView_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text=" 제목 :"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/updateView_Seq"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/updateView_textView4"
+            android:layout_width="39dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:text="내용 :"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateView_textView" />
+
+        <Button
+            android:id="@+id/update_Cancel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_button"
+            android:text="취소"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/update_Btn"
+            app:layout_constraintTop_toTopOf="@+id/update_Btn"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/update_Btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_button"
+            android:text="완료"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateView_Date"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+
